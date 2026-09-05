@@ -3,24 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAR Coin</title>
-  <meta name="description" content="CAR Coin — a neon pastel memecoin. Green, blue, and pure chaos energy." />
+  <title>CAR Coin — BEEP BEEP</title>
+  <meta name="description" content="CAR Coin. Neon pastels, cartoon cars, honks, and zero brakes." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="bg-blobs" aria-hidden="true">
-    <span class="blob b1"></span>
-    <span class="blob b2"></span>
-    <span class="blob b3"></span>
-    <span class="blob b4"></span>
+  <div class="sky" aria-hidden="true">
+    <span class="cloud c1">☁️</span>
+    <span class="cloud c2">☁️</span>
+    <span class="cloud c3">☁️</span>
+    <span class="sun">☀️</span>
+    <span class="star s1">✦</span>
+    <span class="star s2">✦</span>
+    <span class="star s3">✦</span>
+    <span class="star s4">✦</span>
   </div>
+
+  <div class="traffic" id="traffic" aria-hidden="true"></div>
+
+  <div class="speech-layer" id="speech" aria-hidden="true"></div>
 
   <header class="nav">
     <a class="brand" href="#top">
-      <span class="logo">🚗</span>
+      <span class="logo-bounce">🚗</span>
       <span class="brand-name">CAR Coin</span>
     </a>
     <nav class="nav-links">
@@ -28,14 +36,15 @@
       <a href="#tokenomics">Tokenomics</a>
       <a href="#how">How to buy</a>
     </nav>
-    <a class="btn btn-primary" href="#how">Ape in 🚀</a>
+    <button class="btn btn-honk" id="navHonk" type="button">HONK</button>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="hero-inner">
+        <p class="sticker sticker-tilt">BEEP BEEP!!</p>
         <div class="coin-wrap">
-          <div class="coin">
+          <div class="coin" id="heroCoin">
             <div class="coin-face coin-front">
               <span class="coin-emoji">🚗</span>
               <span class="coin-ticker">$CAR</span>
@@ -46,40 +55,53 @@
             </div>
           </div>
         </div>
-        <h1 class="hero-title">CAR Coin</h1>
-        <p class="hero-sub">The memecoin that drives itself. Neon pastels, zero brakes, infinite vibes.</p>
+        <h1 class="hero-title">
+          <span>C</span><span>A</span><span>R</span>
+          <span class="tiny">Coin</span>
+        </h1>
+        <p class="hero-sub">The memecoin that drives itself. Neon pastels. Cartoon cars. Zero brakes. Infinite honks.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary btn-lg" href="#how">Get $CAR</a>
-          <a class="btn btn-ghost btn-lg" href="#about">What's the deal?</a>
+          <a class="btn btn-primary btn-lg wiggle" href="#how">Get $CAR</a>
+          <button class="btn btn-ghost btn-lg" id="bigHonk" type="button">BEEP BEEP 🔊</button>
         </div>
         <div class="stats">
-          <div class="stat"><span class="stat-num">1B</span><span class="stat-label">Supply</span></div>
-          <div class="stat"><span class="stat-num">0%</span><span class="stat-label">Tax</span></div>
-          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Vibes</span></div>
+          <div class="stat bounce-1"><span class="stat-num">1B</span><span class="stat-label">Supply</span></div>
+          <div class="stat bounce-2"><span class="stat-num">0%</span><span class="stat-label">Tax</span></div>
+          <div class="stat bounce-3"><span class="stat-num">∞</span><span class="stat-label">Honks</span></div>
         </div>
+      </div>
+      <div class="road" aria-hidden="true">
+        <div class="road-dashes"></div>
       </div>
     </section>
 
+    <div class="marquee-wrap">
+      <div class="marquee">
+        <span>BEEP BEEP · VROOM · $CAR · HONK · ZERO TAX · NEON PASTELS · NO BRAKES · CARTOON CARS · </span>
+        <span>BEEP BEEP · VROOM · $CAR · HONK · ZERO TAX · NEON PASTELS · NO BRAKES · CARTOON CARS · </span>
+      </div>
+    </div>
+
     <section id="about" class="section">
       <div class="section-inner">
-        <p class="eyebrow">About</p>
-        <h2 class="section-title">A coin with a steering wheel</h2>
-        <p class="section-lead">CAR Coin is a playful memecoin built for fun. Bright greens and blues, rounded everything, and a community that just wants to go vroom. No roadmap, no utility promises — just a good time on the blockchain.</p>
+        <p class="eyebrow">About 🌈</p>
+        <h2 class="section-title wobble">A coin with a steering wheel</h2>
+        <p class="section-lead">CAR Coin is a playground memecoin. Bright greens and blues, cars that refuse to sit still, and a community that just wants to go vroom. No roadmap. No utility lecture. Just a good time with extra honks.</p>
         <div class="feature-grid">
-          <div class="card">
-            <span class="card-icon">🌈</span>
+          <div class="card tilt-l">
+            <span class="card-icon spin-slow">🌈</span>
             <h3>Neon pastels</h3>
-            <p>Green and blue gradients that glow like a kid's dream. Soft, bright, and impossible to ignore.</p>
+            <p>Mint, sky, bubblegum, lemon. Soft glow, chunky type, sticker energy.</p>
           </div>
           <div class="card">
-            <span class="card-icon">🛞</span>
+            <span class="card-icon bounce-forever">🛞</span>
             <h3>Zero tax</h3>
-            <p>In 0, out 0. No toll booths on this highway. Just pure, uncut memecoin energy.</p>
+            <p>In 0. Out 0. No toll booth on this highway. Pure uncut vroom.</p>
           </div>
-          <div class="card">
-            <span class="card-icon">🚀</span>
-            <h3>Community first</h3>
-            <p>Built by degens, for degens. The coin is the community. The community is the coin.</p>
+          <div class="card tilt-r">
+            <span class="card-icon wiggle">🚀</span>
+            <h3>Honk first</h3>
+            <p>Click a car. Click HONK. The page talks back. Beep beep is the whitepaper.</p>
           </div>
         </div>
       </div>
@@ -87,14 +109,14 @@
 
     <section id="tokenomics" class="section section-alt">
       <div class="section-inner">
-        <p class="eyebrow">Tokenomics</p>
+        <p class="eyebrow">Tokenomics 🏁</p>
         <h2 class="section-title">Simple as a red light</h2>
         <div class="tokenomics">
           <div class="tok-row"><span>Ticker</span><strong>$CAR</strong></div>
           <div class="tok-row"><span>Total supply</span><strong>1,000,000,000</strong></div>
           <div class="tok-row"><span>Tax</span><strong>0% / 0%</strong></div>
           <div class="tok-row"><span>Liquidity</span><strong>Burned 🔥</strong></div>
-          <div class="tok-row"><span>Team allocation</span><strong>None</strong></div>
+          <div class="tok-row"><span>Team allocation</span><strong>None. The cars are the team.</strong></div>
           <div class="tok-row"><span>Contract</span><strong class="mono">0xCAR...0001</strong></div>
         </div>
       </div>
@@ -102,18 +124,18 @@
 
     <section id="how" class="section">
       <div class="section-inner">
-        <p class="eyebrow">How to buy</p>
+        <p class="eyebrow">How to buy 🛒</p>
         <h2 class="section-title">Four easy steps to vroom</h2>
         <ol class="steps">
-          <li><span class="step-num">1</span><div><h3>Grab a wallet</h3><p>MetaMask, Phantom, whatever speaks your chain. Any EVM wallet works.</p></div></li>
-          <li><span class="step-num">2</span><div><h3>Fund it</h3><p>ETH or USDC. If you're bridging a feeling, it won't clear. Try a stablecoin.</p></div></li>
-          <li><span class="step-num">3</span><div><h3>Swap for $CAR</h3><p>Paste the contract, check the car emoji on the logo. If you see a different fruit, wrong decade.</p></div></li>
-          <li><span class="step-num">4</span><div><h3>Hold like it's 2008</h3><p>No roadmap, no unlock, no quarterly. Just a disc, a ticker, and the refusal to stop.</p></div></li>
+          <li><span class="step-num">1</span><div><h3>Grab a wallet</h3><p>Any EVM wallet. If it can hold a key, it can hold a car.</p></div></li>
+          <li><span class="step-num">2</span><div><h3>Fund it</h3><p>ETH or USDC. Feelings do not clear. Stablecoins do.</p></div></li>
+          <li><span class="step-num">3</span><div><h3>Swap for $CAR</h3><p>Paste the contract. If you see a fruit logo you took a wrong exit.</p></div></li>
+          <li><span class="step-num">4</span><div><h3>Honk and hold</h3><p>No roadmap. No unlock. Just a ticker and the refusal to stop.</p></div></li>
         </ol>
         <div class="ca-box">
           <span class="ca-label">Contract address</span>
           <code class="ca">0xCAR0000000000000000000000000000000000001</code>
-          <button class="btn btn-ghost" id="copyBtn">Copy</button>
+          <button class="btn btn-ghost" id="copyBtn" type="button">Copy</button>
         </div>
       </div>
     </section>
@@ -122,23 +144,21 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="brand">
-        <span class="logo">🚗</span>
+        <span class="logo-bounce">🚗</span>
         <span class="brand-name">CAR Coin</span>
       </div>
-      <p class="footer-note">CAR Coin is a memecoin for entertainment only. Not a security, not financial advice. You can lose everything. You probably will. 😄</p>
-      <p class="footer-copy">© 2026 CAR Coin. Made with neon and chaos.</p>
+      <p class="footer-note">CAR Coin is a memecoin for entertainment only. Not a security. Not financial advice. You can lose everything. You will still honk.</p>
+      <p class="footer-copy">© 2026 CAR Coin. Drawn like a kid. Built like a menace.</p>
     </div>
   </footer>
 
-  <script>
-    const btn = document.getElementById('copyBtn');
-    btn.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText('0xCAR0000000000000000000000000000000000001');
-        btn.textContent = 'Copied!';
-        setTimeout(() => btn.textContent = 'Copy', 1500);
-      } catch { btn.textContent = 'Oops'; }
-    });
-  </script>
+  <button class="fab" id="fabHonk" type="button" aria-label="Honk">🔊</button>
+
+  <div class="unlock" id="unlock">
+    <button class="btn btn-primary btn-lg wiggle" id="unlockBtn" type="button">Tap to start the cars 🚗</button>
+    <p>Browsers block honks until you click. Fair.</p>
+  </div>
+
+  <script src="./app.js"></script>
 </body>
 </html>
