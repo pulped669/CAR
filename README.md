@@ -1,11 +1,13 @@
 # CAR Coin
 
-A neon-pastel memecoin site that looks like a very talented child designed it on purpose.
+Neon-pastel memecoin site. Cars drive. Buttons honk.
 
-Cars drive across the page. Buttons wobble. Everything honks.
+## Live
 
-## Run
+https://pulped669.github.io/CAR/
 
-Open `index.html` in a browser. No build step.
+If that 404s, open the repo → Settings → Pages → Source: **GitHub Actions**, then rerun the Pages workflow.
 
-Click anywhere once so the browser allows sound, then mash cars and the HONK button.
+## Run locally
+
+Open `index.html` in a browser. Click once so honks can play.
